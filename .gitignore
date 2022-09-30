@@ -6,10 +6,6 @@ packages/icons/native
 **/coverage
 storybook-static
 
-
-# No npm allowed
-package-lock.json
-
 # Logs
 **/logs
 **/*.log
