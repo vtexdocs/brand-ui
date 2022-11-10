@@ -3659,11 +3659,12 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^16", "@types/react@^16.9.47":
-  "integrity" "sha512-BzzcAlyDxXl2nANlabtT4thtvbbnhee8hMmH/CcJrISDBVcJS1iOsP1f0OAgSdGE0MsY9tqcrb9YoZcOFv9dbQ=="
-  "resolved" "https://registry.npmjs.org/@types/react/-/react-16.14.2.tgz"
-  "version" "16.14.2"
+  "integrity" "sha512-hvEy4vGVADbtj/U6+CA5SRC5QFIjdxD7JslAie8EuAYZwhYY9bgforpXNyF1VFzhnkEOesDy1278t1wdjN74cw=="
+  "resolved" "https://registry.npmjs.org/@types/react/-/react-16.14.32.tgz"
+  "version" "16.14.32"
   dependencies:
     "@types/prop-types" "*"
+    "@types/scheduler" "*"
     "csstype" "^3.0.2"
 
 "@types/reactcss@*":
@@ -3679,6 +3680,11 @@
   "version" "0.0.8"
   dependencies:
     "@types/node" "*"
+
+"@types/scheduler@*":
+  "integrity" "sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew=="
+  "resolved" "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
+  "version" "0.16.2"
 
 "@types/source-list-map@*":
   "integrity" "sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA=="
@@ -15945,9 +15951,9 @@
   "version" "3.9.7"
 
 "typescript@^4.0.2":
-  "integrity" "sha512-B3ZIOf1IKeH2ixgHhj6la6xdwR9QrLC5d1VKeCSY4tvkqhF2eqd9O7txNlS0PO3GrBAFIdr3L1ndNwteUbZLYg=="
-  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.1.3.tgz"
-  "version" "4.1.3"
+  "integrity" "sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ=="
+  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.8.4.tgz"
+  "version" "4.8.4"
 
 "uglify-js@^3.1.4":
   "integrity" "sha512-L5i5jg/SHkEqzN18gQMTWsZk3KelRsfD1wUVNqtq0kzqWQqcJjyL8yc1o8hJgRrWqrAl2mUFbhfznEIoi7zi2A=="
