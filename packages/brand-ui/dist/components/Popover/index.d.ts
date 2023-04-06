@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { PopoverProps as BaseProps } from './BasePopover';
 import { BoxProps } from 'theme-ui';
 export declare const Popover: {
