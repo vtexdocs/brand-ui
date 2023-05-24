@@ -5,6 +5,7 @@ export { Button, ButtonProps } from './components/Button';
 export { FooterLanding } from './components/FooterLanding';
 export * from './icons';
 export { Header, HamburgerMenu, LocaleSwitcher, LinksProps, } from './components/Header';
+export { Tooltip, TooltipProps } from './components/Tooltip';
 export { Icon, IconProps } from './components/Icon';
 export { Timeline, EventProps as TimelineEventProps, } from './components/Timeline';
 export { Textarea, TextareaProps } from './components/Textarea';

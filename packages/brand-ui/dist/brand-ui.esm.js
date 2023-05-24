@@ -1,4 +1,4 @@
-import React, { memo, useContext, Fragment, useRef, useEffect, useState } from 'react';
+import React, { memo, useContext, Fragment, useRef, useEffect, cloneElement, useState } from 'react';
 import { ThemeProvider as ThemeProvider$1, jsx, Flex, Box, Text, Link as Link$1, Label } from 'theme-ui';
 export { Box, Flex, Grid, Link, Text, jsx } from 'theme-ui';
 import mergeSx from 'deepmerge';
@@ -6,6 +6,7 @@ import { Button as Button$2, useDisclosureState, Disclosure, DisclosureContent }
 import { useFocusRing } from '@react-aria/focus';
 import { get } from '@theme-ui/css';
 import { ThemeContext } from '@emotion/core';
+import { useTooltipState, TooltipReference, Tooltip as Tooltip$2 } from 'reakit/Tooltip/';
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -3031,6 +3032,59 @@ Header.Brand = Brand;
 Header.ActionButton = ActionButton$1;
 
 /**
+ * Elementary tooltip component that can be reused by all VTEX Styleguides.
+ * You can use reakit full features (except the 'as' prop) and theme-ui's sx.
+ * It renders a tooltip element by default.
+ * This is a styled base component, so any system can theme it.
+ * To customize this component, you just need to add the `tooltip` variant
+ * in your theme.
+ * @example
+ * ```jsx
+ * import { Tooltip } from tooltip
+ *
+ * const theme = {
+ *    tooltip: { ... }
+ * }
+ *
+ * <Tooltip label="Tooltip text here"><button>Children</button></Tooltip>
+ * ```
+ */
+
+function Tooltip(props) {
+  var _props$sx = props.sx,
+      sx = _props$sx === void 0 ? {} : _props$sx,
+      children = props.children,
+      label = props.label,
+      arrow = props.arrow,
+      _props$placement = props.placement,
+      placement = _props$placement === void 0 ? 'top' : _props$placement,
+      visible = props.visible,
+      _props$variant = props.variant,
+      variant = _props$variant === void 0 ? 'tooltip' : _props$variant,
+      tooltipProps = _objectWithoutPropertiesLoose(props, ["sx", "children", "label", "arrow", "placement", "visible", "variant"]);
+
+  var tooltip = useTooltipState({
+    placement: placement,
+    visible: visible
+  });
+  return React.createElement(React.Fragment, null, React.createElement(TooltipReference, Object.assign({}, tooltip, children.props, {
+    ref: children.ref
+  }), function (referenceProps) {
+    return cloneElement(children, _extends({}, referenceProps));
+  }), React.createElement(Tooltip$2, Object.assign({}, tooltip, tooltipProps), arrow && cloneElement(arrow, _extends({}, tooltip)), React.createElement(Box, {
+    variant: variant,
+    sx: sx
+  }, label)));
+}
+
+var Tooltip$1 = function Tooltip$1(_ref) {
+  var children = _ref.children,
+      props = _objectWithoutPropertiesLoose(_ref, ["children"]);
+
+  return React.createElement(Tooltip, Object.assign({}, props), children);
+};
+
+/**
  * The timeline displays a list of events in chronological order.
  * @example
  * ```jsx
@@ -3250,5 +3304,5 @@ var Textarea = function Textarea(props) {
   }, jsx(Text, null, helpMessage), charLimit && jsx(Text, null, charCount, "/", charLimit)));
 };
 
-export { Button$1 as Button, FooterLanding, HamburgerMenu, Header, Icon, IconCaret, IconExit, IconExternalLink, IconFacebook, IconGlobe, IconHamburger, IconHelp, IconInstagram, IconLinkedIn, IconMail, IconVTEX, IconVTEXExpanded, IconVTEXSymbol, IconYouTube, LocaleSwitcher, Textarea, Provider as ThemeProvider, Timeline };
+export { Button$1 as Button, FooterLanding, HamburgerMenu, Header, Icon, IconCaret, IconExit, IconExternalLink, IconFacebook, IconGlobe, IconHamburger, IconHelp, IconInstagram, IconLinkedIn, IconMail, IconVTEX, IconVTEXExpanded, IconVTEXSymbol, IconYouTube, LocaleSwitcher, Textarea, Provider as ThemeProvider, Timeline, Tooltip$1 as Tooltip };
 //# sourceMappingURL=brand-ui.esm.js.map

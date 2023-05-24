@@ -19,6 +19,7 @@ export {
   LocaleSwitcher,
   LinksProps,
 } from './components/Header'
+export { Tooltip, TooltipProps } from './components/Tooltip'
 export { Icon, IconProps } from './components/Icon'
 export {
   Timeline,
